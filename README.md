@@ -12,7 +12,7 @@ Instead, I baked my own little Ruby snippet in the filter section.
 Give it a test run:
 
 ```
-docker run -it --rm truthadjustr/correlator
+docker run --rm truthadjustr/correlator
 ```
 
 Then send a test message:
@@ -26,13 +26,13 @@ Change the container ipaddr accordingly. The port is fixed at 5140.
 You can pass in your custom logstash.conf file by:
 
 ```
-docker run -it --rm -v /path/to/custom/logstash.conf:/usr/share/logstash/pipeline/logstash.conf truthadjustr/correlator
+docker run --rm -v /path/to/custom/logstash.conf:/usr/share/logstash/pipeline/logstash.conf truthadjustr/correlator
 ```
 
 You can link the container port to your host by:
 
 ```
-docker run -it --rm -p 14344:5140/udp truthadjustr/correlator
+docker run --rm -p 14344:5140/udp truthadjustr/correlator
 ```
 
 And then fire a test message to your localhost:
